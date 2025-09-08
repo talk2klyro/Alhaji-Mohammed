@@ -1,0 +1,62 @@
+<!<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Alhaji Mohammed Aliyu Sulaiman</title>
+<style>
+* {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
+body {line-height:1.6; color:#333;}
+nav {position:fixed; top:0; width:100%; background:#2F855A; color:white; display:flex; justify-content:space-between; align-items:center; padding:10px 20px; z-index:1000;}
+nav .logo {font-weight:bold; font-size:1.2rem;}
+nav ul {list-style:none; display:flex; gap:20px;}
+nav ul li a {color:white; font-weight:500; transition:0.3s;}
+nav ul li a:hover {text-decoration:underline;}
+section {padding:80px 20px;}
+section h2 {text-align:center; font-size:2.2rem; margin-bottom:20px; color:#2F855A;}
+form {max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
+input, textarea {padding:10px; border-radius:5px; border:1px solid #ccc; width:100%;}
+button {background:#2F855A; color:white; padding:12px; border:none; border-radius:5px; cursor:pointer; transition:0.3s;}
+button:hover {background:#276749;}
+footer {background:#2F855A; color:white; text-align:center; padding:20px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Alhaji Mohammed Aliyu Sulaiman</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="farm.html">Farm</a></li>
+    <li><a href="speaking.html">Speaking</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section>
+  <h2>Contact & Subscribe</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message / Subscribe Note" rows="4"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  <p style="text-align:center; margin-top:20px;">Email: contact@alhajimohammedfarms.ng | Phone: +234 801 234 5678</p>
+</section>
+
+<footer>
+  &copy; 2025 Alhaji Mohammed Aliyu Sulaiman | All Rights Reserved
+</footer>
+
+<script>
+document.querySelector('form').addEventListener('submit', e=>{
+  e.preventDefault();
+  alert('Message submitted successfully! (Demo)');
+  e.target.reset();
+});
+</script>
+
+</body>
+</html>
