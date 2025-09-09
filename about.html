@@ -3,29 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Alhaji Mohammed Aliyu Sulaiman</title>
+<title>AM&S FARM - About</title>
 <style>
-* {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
-body {line-height:1.6; color:#333;}
-nav {position:fixed; top:0; width:100%; background:#2F855A; color:white; display:flex; justify-content:space-between; align-items:center; padding:10px 20px; z-index:1000;}
-nav .logo {font-weight:bold; font-size:1.2rem;}
-nav ul {list-style:none; display:flex; gap:20px;}
-nav ul li a {color:white; font-weight:500; transition:0.3s;}
-nav ul li a:hover {text-decoration:underline;}
-section {padding:80px 20px;}
-section h2 {text-align:center; font-size:2.2rem; margin-bottom:20px; color:#2F855A;}
-.timeline {max-width:800px; margin:0 auto;}
-.timeline-item {margin-bottom:20px; padding:15px; border-left:4px solid #68D391; background:#F0FFF4; border-radius:5px; position:relative;}
-.timeline-item::before {content:""; position:absolute; left:-10px; top:10px; width:10px; height:10px; background:#68D391; border-radius:50%;}
-footer {background:#2F855A; color:white; text-align:center; padding:20px;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{line-height:1.6;color:#333;}
+nav{position:fixed;top:0;width:100%;background:#2F855A;color:white;display:flex;justify-content:space-between;align-items:center;padding:10px 20px;z-index:1000;}
+nav .logo{font-weight:bold;font-size:1.3rem;}
+nav ul{list-style:none;display:flex;gap:20px;}
+nav ul li a{color:white;font-weight:500;transition:0.3s;}
+nav ul li a:hover{text-decoration:underline;}
+.menu-toggle{display:none;font-size:1.5rem;cursor:pointer;}
+@media(max-width:768px){
+  nav ul{display:none;flex-direction:column;background:#276749;position:absolute;top:60px;right:0;width:200px;padding:20px;}
+  nav ul.show{display:flex;}
+  .menu-toggle{display:block;}
+}
+section{padding:80px 20px;}
+section h2{text-align:center;font-size:2.2rem;margin-bottom:20px;color:#2F855A;}
+p{text-align:center;max-width:900px;margin:0 auto 20px auto;}
+.timeline{max-width:800px;margin:30px auto;}
+.timeline-item{margin-bottom:20px;padding:15px;border-left:4px solid #68D391;background:#F0FFF4;border-radius:5px;position:relative;}
+.timeline-item::before{content:"";position:absolute;left:-10px;top:10px;width:10px;height:10px;background:#68D391;border-radius:50%;}
+footer{background:#2F855A;color:white;text-align:center;padding:20px;}
 </style>
 </head>
 <body>
 
-<!-- Navbar -->
 <nav>
-  <div class="logo">Alhaji Mohammed Aliyu Sulaiman</div>
-  <ul>
+  <div class="logo">AM&S FARM</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <ul id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="farm.html">Farm</a></li>
@@ -35,28 +42,28 @@ footer {background:#2F855A; color:white; text-align:center; padding:20px;}
   </ul>
 </nav>
 
-<!-- About Section -->
 <section>
-  <h2>About the Farmer</h2>
-  <p style="max-width:800px; margin:0 auto 30px auto; text-align:center;">
-    Alhaji Mohammed Aliyu Sulaiman is a modern farmer in Damaturu, Yobe State, who blends traditional farming methods with modern technology. He produces organic crops and healthy livestock while educating the community about sustainable agriculture.
-  </p>
+  <h2>About Us</h2>
+  <p>AM&S FARM is based in Damaturu, Yobe State. We are a modern agricultural enterprise that merges traditional knowledge with cutting-edge technology. Our mission is to deliver healthy, organic produce while uplifting our community.</p>
+  <p><strong>Mission:</strong> To grow nutritious food using eco-friendly practices.<br>
+     <strong>Vision:</strong> To be a leading example of sustainable farming across West Africa.</p>
   <div class="timeline">
-    <div class="timeline-item"><strong>2010:</strong> Started small-scale crop farming with millet and sorghum.</div>
-    <div class="timeline-item"><strong>2015:</strong> Introduced livestock: goats, chickens, and cows.</div>
-    <div class="timeline-item"><strong>2020:</strong> Adopted smart irrigation and drone-based soil monitoring.</div>
-    <div class="timeline-item"><strong>2023:</strong> Recognized as a pioneer of sustainable innovation in northern Nigeria.</div>
+    <div class="timeline-item"><strong>2010:</strong> Began as a small family farm with millet and sorghum.</div>
+    <div class="timeline-item"><strong>2015:</strong> Expanded into poultry, goats, and dairy cattle.</div>
+    <div class="timeline-item"><strong>2018:</strong> Introduced organic fertilizer trials and crop rotation.</div>
+    <div class="timeline-item"><strong>2020:</strong> Adopted drone monitoring and smart irrigation.</div>
+    <div class="timeline-item"><strong>2023:</strong> Launched community workshops for young farmers.</div>
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
-  &copy; 2025 Alhaji Mohammed Aliyu Sulaiman | All Rights Reserved
+  &copy; 2025 AM&S FARM | All Rights Reserved
 </footer>
 
 <script>
-// No extra JS needed for About page
+function toggleMenu(){
+  document.getElementById('nav-links').classList.toggle('show');
+}
 </script>
-
 </body>
 </html>
