@@ -3,32 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Speaking - Alhaji Mohammed Aliyu Sulaiman</title>
+<title>AM&S FARM - Speaking</title>
 <style>
-* {margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif;}
-body {line-height:1.6; color:#333;}
-nav {position:fixed; top:0; width:100%; background:#2F855A; color:white; display:flex; justify-content:space-between; align-items:center; padding:10px 20px; z-index:1000;}
-nav .logo {font-weight:bold; font-size:1.2rem;}
-nav ul {list-style:none; display:flex; gap:20px;}
-nav ul li a {color:white; font-weight:500; transition:0.3s;}
-nav ul li a:hover {text-decoration:underline;}
-section {padding:80px 20px;}
-section h2 {text-align:center; font-size:2.2rem; margin-bottom:20px; color:#2F855A;}
-.speaking {max-width:800px; margin:0 auto 30px auto;}
-.event {margin-bottom:20px; padding:15px; border-left:4px solid #68D391; background:#F0FFF4; border-radius:5px; position:relative;}
-.event::before {content:""; position:absolute; left:-10px; top:10px; width:10px; height:10px; background:#68D391; border-radius:50%;}
-form {max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
-input, textarea {padding:10px; border-radius:5px; border:1px solid #ccc; width:100%;}
-button {background:#2F855A; color:white; padding:12px; border:none; border-radius:5px; cursor:pointer; transition:0.3s;}
-button:hover {background:#276749;}
-footer {background:#2F855A; color:white; text-align:center; padding:20px;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{line-height:1.6;color:#333;}
+nav{position:fixed;top:0;width:100%;background:#2F855A;color:white;display:flex;justify-content:space-between;align-items:center;padding:10px 20px;z-index:1000;}
+nav .logo{font-weight:bold;font-size:1.3rem;}
+nav ul{list-style:none;display:flex;gap:20px;}
+nav ul li a{color:white;font-weight:500;transition:0.3s;}
+nav ul li a:hover{text-decoration:underline;}
+.menu-toggle{display:none;font-size:1.5rem;cursor:pointer;}
+@media(max-width:768px){
+  nav ul{display:none;flex-direction:column;background:#276749;position:absolute;top:60px;right:0;width:200px;padding:20px;}
+  nav ul.show{display:flex;}
+  .menu-toggle{display:block;}
+}
+section{padding:80px 20px;}
+section h2{text-align:center;font-size:2.2rem;margin-bottom:20px;color:#2F855A;}
+.speaking{max-width:800px;margin:0 auto 30px auto;}
+.event{margin-bottom:20px;padding:15px;border-left:4px solid #68D391;background:#F0FFF4;border-radius:5px;position:relative;}
+.event::before{content:"";position:absolute;left:-10px;top:10px;width:10px;height:10px;background:#68D391;border-radius:50%;}
+form{max-width:600px;margin:0 auto;display:flex;flex-direction:column;gap:15px;}
+input,textarea{padding:10px;border-radius:5px;border:1px solid #ccc;width:100%;}
+button{background:#2F855A;color:white;padding:12px;border:none;border-radius:5px;cursor:pointer;transition:0.3s;}
+button:hover{background:#276749;}
+footer{background:#2F855A;color:white;text-align:center;padding:20px;}
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="logo">Alhaji Mohammed Aliyu Sulaiman</div>
-  <ul>
+  <div class="logo">AM&S FARM</div>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <ul id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="farm.html">Farm</a></li>
@@ -42,7 +49,9 @@ footer {background:#2F855A; color:white; text-align:center; padding:20px;}
   <h2>Speaking Engagements</h2>
   <div class="speaking">
     <div class="event"><strong>2022:</strong> Innovating Agriculture in Northern Nigeria – Damaturu University</div>
-    <div class="event"><strong>2023:</strong> Sustainable Farming Practices – Yobe State Agricultural Expo</div>
+    <div class="event"><strong>2023:</strong> Sustainable Farming Expo – Yobe State Agricultural Fair</div>
+    <div class="event"><strong>2024:</strong> Smart Irrigation Workshop – Abuja TechFarm Summit</div>
+    <div class="event"><strong>2024:</strong> Organic Practices for Healthier Communities – Kano Agritech Conference</div>
   </div>
 
   <form>
@@ -57,16 +66,18 @@ footer {background:#2F855A; color:white; text-align:center; padding:20px;}
 </section>
 
 <footer>
-  &copy; 2025 Alhaji Mohammed Aliyu Sulaiman | All Rights Reserved
+  &copy; 2025 AM&S FARM | All Rights Reserved
 </footer>
 
 <script>
+function toggleMenu(){
+  document.getElementById('nav-links').classList.toggle('show');
+}
 document.querySelector('form').addEventListener('submit', e=>{
   e.preventDefault();
   alert('Booking submitted successfully! (Demo)');
   e.target.reset();
 });
 </script>
-
 </body>
-</html>
+</html>q
